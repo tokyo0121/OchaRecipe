@@ -15,6 +15,7 @@
 		2D95D6B126594A1D00421708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D6AF26594A1D00421708 /* LaunchScreen.storyboard */; };
 		2D95D6BC26594A1D00421708 /* OchaRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D6BB26594A1D00421708 /* OchaRecipeTests.swift */; };
 		2D95D6C726594A1D00421708 /* OchaRecipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D6C626594A1D00421708 /* OchaRecipeUITests.swift */; };
+		2DE784AF265A4D7400965D59 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE784AE265A4D7300965D59 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2D95D6C226594A1D00421708 /* OchaRecipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OchaRecipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D95D6C626594A1D00421708 /* OchaRecipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OchaRecipeUITests.swift; sourceTree = "<group>"; };
 		2D95D6C826594A1D00421708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE784AE265A4D7300965D59 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		2D95D6A326594A1900421708 /* OchaRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				2DE784AE265A4D7300965D59 /* icon.png */,
 				2D95D6A426594A1900421708 /* AppDelegate.swift */,
 				2D95D6A626594A1900421708 /* SceneDelegate.swift */,
 				2D95D6A826594A1900421708 /* ViewController.swift */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE784AF265A4D7400965D59 /* icon.png in Resources */,
 				2D95D6B126594A1D00421708 /* LaunchScreen.storyboard in Resources */,
 				2D95D6AE26594A1D00421708 /* Assets.xcassets in Resources */,
 				2D95D6AC26594A1900421708 /* Main.storyboard in Resources */,
