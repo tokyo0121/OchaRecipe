@@ -4,67 +4,102 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMW-8i-zCD">
-                                <rect key="frame" x="0.0" y="66" width="375" height="51"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.77254909279999995" green="0.90980398650000005" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.77254909279999995" green="0.90980398650000005" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x7I-bu-bNa">
-                                <rect key="frame" x="16" y="143" width="343" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="お料理"/>
-                                    <segment title="スイーツ"/>
-                                    <segment title="日用品"/>
-                                    <segment title="茶殻"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </segmentedControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s5L-7T-fc9">
-                                <rect key="frame" x="16" y="210" width="343" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnF-ad-rAc">
-                                <rect key="frame" x="246" y="609" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="ノート">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-qw-WbZ">
-                                <rect key="frame" x="28" y="609" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.55294120311737061" green="0.85882359743118286" blue="0.062745101749897003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="おきにいり">
-                                    <color key="titleColor" red="0.14215686917304993" green="0.27450981736183167" blue="0.062745101749897003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.7725490927696228" green="0.90980398654937744" blue="0.51372551918029785" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dgo-53-WNp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tcc-rl-nCa">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" showsScopeBar="YES" id="Qx6-nG-0pL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <scopeButtonTitles>
+                                        <string>お料理</string>
+                                        <string>甘味</string>
+                                        <string>日用品</string>
+                                        <string>茶殻</string>
+                                    </scopeButtonTitles>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="141" id="PGT-vs-ZWJ" customClass="TableCell" customModule="OchaRecipe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75.333333969116211" width="375" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PGT-vs-ZWJ" id="lVN-Tk-ojE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BF5-fZ-PjY">
+                                                    <rect key="frame" x="10" y="10" width="139" height="121"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="139" id="tEq-oU-u9z"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oc-qH-0eZ">
+                                                    <rect key="frame" x="181" y="88" width="165" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-QO-Tlb">
+                                                    <rect key="frame" x="181" y="35" width="165" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BF5-fZ-PjY" firstAttribute="top" secondItem="lVN-Tk-ojE" secondAttribute="top" constant="10" id="9ls-aZ-2eK"/>
+                                                <constraint firstItem="BF5-fZ-PjY" firstAttribute="leading" secondItem="lVN-Tk-ojE" secondAttribute="leading" constant="10" id="AdH-sf-arU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fiV-QO-Tlb" secondAttribute="trailing" constant="13" id="SXJ-uX-Dx6"/>
+                                                <constraint firstItem="fiV-QO-Tlb" firstAttribute="top" secondItem="lVN-Tk-ojE" secondAttribute="topMargin" constant="24" id="hQ6-rd-i9a"/>
+                                                <constraint firstItem="8oc-qH-0eZ" firstAttribute="top" secondItem="fiV-QO-Tlb" secondAttribute="bottom" constant="31" id="hYY-06-5TO"/>
+                                                <constraint firstItem="fiV-QO-Tlb" firstAttribute="leading" secondItem="8oc-qH-0eZ" secondAttribute="leading" id="ide-Ah-kWY"/>
+                                                <constraint firstItem="fiV-QO-Tlb" firstAttribute="trailing" secondItem="8oc-qH-0eZ" secondAttribute="trailing" id="kaA-ZQ-rEk"/>
+                                                <constraint firstItem="fiV-QO-Tlb" firstAttribute="leading" secondItem="BF5-fZ-PjY" secondAttribute="trailing" constant="26" id="vvr-Xe-uRr"/>
+                                                <constraint firstAttribute="bottom" secondItem="BF5-fZ-PjY" secondAttribute="bottom" constant="10" id="zpA-br-VIH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryLbl" destination="8oc-qH-0eZ" id="Gol-xS-JNQ"/>
+                                            <outlet property="imgView" destination="BF5-fZ-PjY" id="m8Z-Qj-zF7"/>
+                                            <outlet property="nameLbl" destination="fiV-QO-Tlb" id="wHT-B9-qrn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y49-Mb-NeJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y49-Mb-NeJ" firstAttribute="trailing" secondItem="Tcc-rl-nCa" secondAttribute="trailing" id="c7E-Ew-UgH"/>
+                            <constraint firstItem="Tcc-rl-nCa" firstAttribute="top" secondItem="Y49-Mb-NeJ" secondAttribute="top" id="dxm-G7-1Tx"/>
+                            <constraint firstItem="Y49-Mb-NeJ" firstAttribute="bottom" secondItem="Tcc-rl-nCa" secondAttribute="bottom" id="i87-vn-Rto"/>
+                            <constraint firstItem="Tcc-rl-nCa" firstAttribute="leading" secondItem="Y49-Mb-NeJ" secondAttribute="leading" id="in3-dY-BaR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Qx6-nG-0pL" id="udF-HK-KO1"/>
+                        <outlet property="table" destination="Tcc-rl-nCa" id="ejz-Ao-FxH"/>
+                    </connections>
+                </viewController>
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="62.807881773399018"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
