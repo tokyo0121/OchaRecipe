@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,6 +83,7 @@
                                             <outlet property="categoryLbl" destination="8oc-qH-0eZ" id="Gol-xS-JNQ"/>
                                             <outlet property="imgView" destination="BF5-fZ-PjY" id="m8Z-Qj-zF7"/>
                                             <outlet property="nameLbl" destination="fiV-QO-Tlb" id="wHT-B9-qrn"/>
+                                            <segue destination="j5P-K5-Wsf" kind="show" identifier="showDetailSegue" id="JVJ-Wl-unx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -90,6 +92,23 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="750-E8-HtZ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2q-cr-4wj">
+                                <rect key="frame" x="238" y="667" width="107" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.3382001724" green="0.45403243560000001" blue="0.2385861158" alpha="0.9518971222" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="メモ">
+                                    <color key="titleColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="b3m-oe-W0o" kind="presentation" id="hk4-MV-JcS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y49-Mb-NeJ"/>
                         <color key="backgroundColor" red="0.87352949380874634" green="0.91568636894226074" blue="0.56862747669219971" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -101,13 +120,226 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="Qx6-nG-0pL" id="udF-HK-KO1"/>
-                        <outlet property="table" destination="Tcc-rl-nCa" id="ejz-Ao-FxH"/>
+                        <outlet property="searchBar" destination="Qx6-nG-0pL" id="8aC-lq-KKZ"/>
+                        <outlet property="table" destination="Tcc-rl-nCa" id="aWr-8t-R8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="62.807881773399018"/>
         </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="pMQ-bb-7Lj">
+            <objects>
+                <viewController id="j5P-K5-Wsf" customClass="RecipeDetailViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oe5-BD-y1a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-Nd-uPf">
+                                <rect key="frame" x="25" y="20" width="320" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-Pb-HtR">
+                                <rect key="frame" x="25" y="488" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1N-nf-EdO">
+                                <rect key="frame" x="24.999999999999996" y="314" width="46.666666666666657" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-MZ-ZtI">
+                                <rect key="frame" x="25" y="517" width="325" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SZJ-T7-T9e">
+                                <rect key="frame" x="25" y="343" width="325" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25g-bL-IIJ">
+                                <rect key="frame" x="25" y="258" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mbu-DG-YFy"/>
+                        <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Spf-DQ-SEW"/>
+                    <connections>
+                        <outlet property="recipeImageView" destination="4d9-Nd-uPf" id="Eei-lQ-Zfe"/>
+                        <outlet property="recipeMaterialTextView" destination="SZJ-T7-T9e" id="Ouq-VI-Wpo"/>
+                        <outlet property="recipeNameLabel" destination="25g-bL-IIJ" id="2mt-L2-6GT"/>
+                        <outlet property="recipeRecipeTextView" destination="CAr-MZ-ZtI" id="Arg-gc-K8o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgW-Za-auO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.20000000000005" y="62.807881773399018"/>
+        </scene>
+        <!--わたしのメモ帳-->
+        <scene sceneID="K5N-2e-oSx">
+            <objects>
+                <tableViewController id="3gi-HE-wNQ" customClass="MemoViewContoroller" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qUe-X5-WLt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gnR-OD-q5d" customClass="memoTableView" customModule="OchaRecipe">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gnR-OD-q5d" id="grk-f4-VxX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3gi-HE-wNQ" id="b1X-zM-fQf"/>
+                            <outlet property="delegate" destination="3gi-HE-wNQ" id="FMg-z5-HkO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="わたしのメモ帳" id="fDI-Rs-MMZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="1Kh-IT-EDE">
+                            <connections>
+                                <segue destination="Nfl-En-zEI" kind="show" id="6X9-6h-IHT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <segue destination="jYv-pA-DJl" kind="show" id="bZK-pC-bMe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omr-jg-vr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="807"/>
+        </scene>
+        <!--Add Memo View Controller-->
+        <scene sceneID="yev-NY-s38">
+            <objects>
+                <viewController id="Nfl-En-zEI" customClass="AddMemoViewController" customModule="OchaRecipe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nNm-nO-8pY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-d5-Zom" customClass="memoTextView" customModule="OchaRecipe">
+                                <rect key="frame" x="20" y="50" width="335" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="QhY-8f-LmY"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gX-n7-5jt">
+                                <rect key="frame" x="100" y="400" width="175" height="57"/>
+                                <color key="backgroundColor" red="0.33820017238616978" green="0.45403243556167139" blue="0.23858611577126276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" red="0.77480720322630181" green="0.98548370600000001" blue="0.69889402150596913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="Nfl-En-zEI" eventType="touchUpInside" id="Byd-ET-OpZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="thG-RR-XK2"/>
+                        <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3gX-n7-5jt" firstAttribute="top" secondItem="Cq3-d5-Zom" secondAttribute="bottom" constant="150" id="1M9-Nj-7nx"/>
+                            <constraint firstItem="Cq3-d5-Zom" firstAttribute="leading" secondItem="thG-RR-XK2" secondAttribute="leading" constant="20" id="7EC-h4-gXu"/>
+                            <constraint firstItem="thG-RR-XK2" firstAttribute="trailing" secondItem="Cq3-d5-Zom" secondAttribute="trailing" constant="20" id="Hp9-1d-LDG"/>
+                            <constraint firstItem="thG-RR-XK2" firstAttribute="trailing" secondItem="3gX-n7-5jt" secondAttribute="trailing" constant="100" id="hQd-BM-OfO"/>
+                            <constraint firstItem="3gX-n7-5jt" firstAttribute="leading" secondItem="thG-RR-XK2" secondAttribute="leading" constant="100" id="s9S-QU-spd"/>
+                            <constraint firstItem="Cq3-d5-Zom" firstAttribute="top" secondItem="thG-RR-XK2" secondAttribute="top" constant="50" id="yhG-pw-H8h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZh-ci-INA"/>
+                    <connections>
+                        <outlet property="memoTextView" destination="Cq3-d5-Zom" id="1Vq-ob-Ifk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zy5-M7-3hF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.5999999999999" y="822.41379310344826"/>
+        </scene>
+        <!--メモ一覧-->
+        <scene sceneID="mMZ-6n-atu">
+            <objects>
+                <viewController title="メモ一覧" id="jYv-pA-DJl" customClass="DetailViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2m-13-vuf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="28J-M3-Kqx" customClass="memoTextView" customModule="OchaRecipe">
+                                <rect key="frame" x="16" y="94" width="343" height="601"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ma9-1X-DBj"/>
+                        <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kma-eR-ybc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="trash" id="Bdu-Sv-peV">
+                            <connections>
+                                <action selector="deleteMemo:" destination="jYv-pA-DJl" id="L9l-BF-w8w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="memoTextView" destination="28J-M3-Kqx" id="GFO-8H-wBc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKu-F5-Sw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.5999999999999" y="1549.5073891625616"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zwc-Vj-Z3z">
+            <objects>
+                <navigationController id="b3m-oe-W0o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yjz-ar-vHs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3gi-HE-wNQ" kind="relationship" relationship="rootViewController" id="fKf-6S-KFY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIr-Ls-g1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="807"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
