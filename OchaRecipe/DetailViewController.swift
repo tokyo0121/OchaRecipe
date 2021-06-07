@@ -8,7 +8,6 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
     @IBOutlet weak var memoTextView: UITextView!
     
     var selectedRow:Int!

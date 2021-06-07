@@ -10,9 +10,8 @@
 import UIKit
 
 class MemoViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    
+
     @IBOutlet weak var memoTableView: UITableView!
-    
     var memoArray = [String]()
     
     let ud = UserDefaults.standard
@@ -34,6 +33,9 @@ class MemoViewController: UIViewController,UITableViewDataSource,UITableViewDele
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 60
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +51,11 @@ class MemoViewController: UIViewController,UITableViewDataSource,UITableViewDele
         if segue.identifier == "toDetail"{
             //detailViewControllerを取得
             //as! DetailViewControllerでダウンキャストしている
-            let detailViewController = segue.destination as! DetailViewController
+            let DetailViewController = segue.destination as! DetailViewController
             //遷移前に選ばれているCellが取得できる
             let selectedIndexPath = memoTableView.indexPathForSelectedRow!
-            detailViewController.selectedMemo = memoArray[selectedIndexPath.row]
-            detailViewController.selectedRow = selectedIndexPath.row
+            DetailViewController.selectedMemo = memoArray[selectedIndexPath.row]
+            DetailViewController.selectedRow = selectedIndexPath.row
         }
     }
     func loadMemo(){

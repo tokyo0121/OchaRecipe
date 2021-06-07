@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
+    
     var recipeArray = [OchaRecipe]()
     var currentRecipeArray = [OchaRecipe]() //updated table
     
@@ -31,16 +32,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private func setUpRecipes(){
         // MEALS
-        recipeArray.append(OchaRecipe(name: "煎茶ハンバーグ", category: .meal, image: "meal_1_sample"))
-        recipeArray.append(OchaRecipe(name: "煎茶のお豆腐", category: .meal, image: "meal_2_sample"))
+        recipeArray.append(OchaRecipe(name: "煎茶ハンバーグ", category: .meal, imageName: "meal_1_sample", material: "煎茶、ひき肉 ", recipeRecipe: "お茶を淹れる "))
+        recipeArray.append(OchaRecipe(name: "煎茶のお豆腐", category: .meal, imageName: "meal_2_sample", material: " ", recipeRecipe: " "))
         //SWEETS
-        recipeArray.append(OchaRecipe(name: "抹茶シフォンケーキ", category: .sweet, image: "sweets_1_sample"))
-        recipeArray.append(OchaRecipe(name: "抹茶クッキー", category: .sweet, image: "sweets_2_sample"))
+        recipeArray.append(OchaRecipe(name: "抹茶シフォンケーキ", category: .sweet, imageName: "sweets_1_sample", material: " ", recipeRecipe: " "))
+        recipeArray.append(OchaRecipe(name: "抹茶クッキー", category: .sweet, imageName: "sweets_2_sample", material: " ", recipeRecipe: " "))
         //GOODS
-        recipeArray.append(OchaRecipe(name: "日本茶の石鹸", category: .goods, image: "goods_1_sample"))
+        recipeArray.append(OchaRecipe(name: "日本茶の石鹸", category: .goods, imageName: "goods_1_sample", material: " ", recipeRecipe: " "))
         //CHAGARA
-        recipeArray.append(OchaRecipe(name: "茶殻のおひたし", category: .chagara, image: "chagara_1_sample"))
-        recipeArray.append(OchaRecipe(name: "茶殻のおむすび", category: .chagara, image: "chagara_2_sample"))
+        recipeArray.append(OchaRecipe(name: "茶殻のおひたし", category: .chagara, imageName: "chagara_1_sample", material: " ", recipeRecipe: " "))
+        recipeArray.append(OchaRecipe(name: "茶殻のおむすび", category: .chagara, imageName: "chagara_2_sample", material: " ", recipeRecipe: " "))
         
         
         currentRecipeArray = recipeArray
@@ -77,10 +78,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         cell.nameLbl.text = currentRecipeArray[indexPath.row].name
         cell.categoryLbl.text = currentRecipeArray[indexPath.row].category.rawValue
-        cell.imgView.image = UIImage(named: currentRecipeArray[indexPath.row].image)
+        cell.imgView.image = UIImage(named: currentRecipeArray[indexPath.row].imageName)
         
         return cell
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailSegue" {
+            if let indexPath = table.indexPathForSelectedRow {
+                guard let destination = segue.destination as? RecipeDetailViewController else {
+                    fatalError("Failed to prepare RecipeDetailViewController.")
+                }
+                
+                destination.recipe = recipeArray[indexPath.row]
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let indexPath = table.indexPathForSelectedRow{
+            table.deselectRow(at: indexPath, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -163,13 +182,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     class OchaRecipe {
         let name: String
-        let image: String
+        let imageName: String
         let category: RecipeType
+        let material: String
+        let recipeRecipe: String
         
-        init(name: String, category: RecipeType, image: String) {
+        init(name: String, category: RecipeType, imageName: String, material: String, recipeRecipe: String) {
             self.name = name
             self.category = category
-            self.image = image
+            self.imageName = imageName
+            self.material = material
+            self.recipeRecipe = recipeRecipe
         
     }
 }

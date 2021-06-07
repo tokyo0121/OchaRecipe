@@ -41,7 +41,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="141" id="PGT-vs-ZWJ" customClass="TableCell" customModule="OchaRecipe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75.333333969116211" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PGT-vs-ZWJ" id="lVN-Tk-ojE">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PGT-vs-ZWJ" id="lVN-Tk-ojE" customClass="RecipeCell" customModule="OchaRecipe" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -106,7 +106,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="b3m-oe-W0o" kind="presentation" id="hk4-MV-JcS"/>
+                                    <segue destination="S9j-ad-HVp" kind="presentation" id="JE4-Xc-7H8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-Nd-uPf">
-                                <rect key="frame" x="25" y="20" width="320" height="230"/>
+                                <rect key="frame" x="25" y="20" width="320" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2Z-Pb-HtR">
@@ -159,7 +159,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SZJ-T7-T9e">
@@ -167,13 +167,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25g-bL-IIJ">
-                                <rect key="frame" x="25" y="258" width="71" height="21"/>
+                                <rect key="frame" x="25" y="258" width="309" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -194,50 +194,56 @@
             <point key="canvasLocation" x="807.20000000000005" y="62.807881773399018"/>
         </scene>
         <!--わたしのメモ帳-->
-        <scene sceneID="K5N-2e-oSx">
+        <scene sceneID="LYi-2j-bWX">
             <objects>
-                <tableViewController id="3gi-HE-wNQ" customClass="MemoViewContoroller" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qUe-X5-WLt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                <viewController title="わたしのメモ帳" id="QFa-Ee-smu" customClass="MemoViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYB-RG-0vt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZmT-NR-dbM">
+                                <rect key="frame" x="0.0" y="56" width="375" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="114" id="6nS-1I-1GI">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6nS-1I-1GI" id="ZWz-jL-zVd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YsT-mE-FDV"/>
                         <color key="backgroundColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gnR-OD-q5d" customClass="memoTableView" customModule="OchaRecipe">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gnR-OD-q5d" id="grk-f4-VxX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="3gi-HE-wNQ" id="b1X-zM-fQf"/>
-                            <outlet property="delegate" destination="3gi-HE-wNQ" id="FMg-z5-HkO"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="わたしのメモ帳" id="fDI-Rs-MMZ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="1Kh-IT-EDE">
+                    </view>
+                    <navigationItem key="navigationItem" title="わたしのメモ帳" id="LPC-x8-diS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="obA-jg-QUN">
                             <connections>
-                                <segue destination="Nfl-En-zEI" kind="show" id="6X9-6h-IHT"/>
+                                <segue destination="Nfl-En-zEI" kind="presentation" id="FCZ-Z2-s1Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <segue destination="jYv-pA-DJl" kind="show" id="bZK-pC-bMe"/>
+                        <outlet property="memoTableView" destination="ZmT-NR-dbM" id="swB-kI-sGu"/>
+                        <segue destination="jYv-pA-DJl" kind="show" identifier="toDetail" id="uwR-aq-3Is"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="omr-jg-vr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zA-6B-KPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="807"/>
+            <point key="canvasLocation" x="805.60000000000002" y="846.79802955665025"/>
         </scene>
         <!--Add Memo View Controller-->
         <scene sceneID="yev-NY-s38">
             <objects>
-                <viewController id="Nfl-En-zEI" customClass="AddMemoViewController" customModule="OchaRecipe" sceneMemberID="viewController">
+                <viewController id="Nfl-En-zEI" customClass="AddMemoViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNm-nO-8pY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-d5-Zom" customClass="memoTextView" customModule="OchaRecipe">
@@ -247,7 +253,7 @@
                                     <constraint firstAttribute="height" constant="200" id="QhY-8f-LmY"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gX-n7-5jt">
@@ -258,7 +264,7 @@
                                     <color key="titleColor" red="0.77480720322630181" green="0.98548370600000001" blue="0.69889402150596913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="save:" destination="Nfl-En-zEI" eventType="touchUpInside" id="Byd-ET-OpZ"/>
+                                    <action selector="save:" destination="Nfl-En-zEI" eventType="touchUpInside" id="hu0-hd-TeI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -280,22 +286,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zy5-M7-3hF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061.5999999999999" y="822.41379310344826"/>
+            <point key="canvasLocation" x="1863" y="847"/>
         </scene>
         <!--メモ一覧-->
         <scene sceneID="mMZ-6n-atu">
             <objects>
                 <viewController title="メモ一覧" id="jYv-pA-DJl" customClass="DetailViewController" customModule="OchaRecipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g2m-13-vuf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="28J-M3-Kqx" customClass="memoTextView" customModule="OchaRecipe">
-                                <rect key="frame" x="16" y="94" width="343" height="601"/>
+                                <rect key="frame" x="16" y="94" width="343" height="574"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -315,23 +321,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKu-F5-Sw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061.5999999999999" y="1549.5073891625616"/>
+            <point key="canvasLocation" x="1863" y="1564"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="zwc-Vj-Z3z">
+        <scene sceneID="fpb-pQ-lV2">
             <objects>
-                <navigationController id="b3m-oe-W0o" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yjz-ar-vHs">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S9j-ad-HVp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nH6-Gq-w06">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3gi-HE-wNQ" kind="relationship" relationship="rootViewController" id="fKf-6S-KFY"/>
+                        <segue destination="QFa-Ee-smu" kind="relationship" relationship="rootViewController" id="fWm-nG-LD1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DIr-Ls-g1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXP-9v-FUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="807"/>
+            <point key="canvasLocation" x="-23" y="847"/>
         </scene>
     </scenes>
     <resources>
