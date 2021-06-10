@@ -10,10 +10,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var table: UITableView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet weak var levelLabel: UILabel!
     
     
     var recipeArray = [OchaRecipe]()
     var currentRecipeArray = [OchaRecipe]() //updated table
+    
+    
     
     
     override func viewDidLoad() {
@@ -32,16 +35,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private func setUpRecipes(){
         // MEALS
-        recipeArray.append(OchaRecipe(name: "煎茶ハンバーグ", category: .meal, imageName: "meal_1_sample", material: "煎茶、ひき肉 ", recipeRecipe: "お茶を淹れる "))
-        recipeArray.append(OchaRecipe(name: "煎茶のお豆腐", category: .meal, imageName: "meal_2_sample", material: " ", recipeRecipe: " "))
-        //SWEETS
-        recipeArray.append(OchaRecipe(name: "抹茶シフォンケーキ", category: .sweet, imageName: "sweets_1_sample", material: " ", recipeRecipe: " "))
-        recipeArray.append(OchaRecipe(name: "抹茶クッキー", category: .sweet, imageName: "sweets_2_sample", material: " ", recipeRecipe: " "))
-        //GOODS
-        recipeArray.append(OchaRecipe(name: "日本茶の石鹸", category: .goods, imageName: "goods_1_sample", material: " ", recipeRecipe: " "))
-        //CHAGARA
-        recipeArray.append(OchaRecipe(name: "茶殻のおひたし", category: .chagara, imageName: "chagara_1_sample", material: " ", recipeRecipe: " "))
-        recipeArray.append(OchaRecipe(name: "茶殻のおむすび", category: .chagara, imageName: "chagara_2_sample", material: " ", recipeRecipe: " "))
+        recipeArray.append(OchaRecipe(name: "煎茶香るシューマイ", category: .meal,level: "★★☆", imageName: "syu-mai",material: " 煎茶（乾燥茶葉）：小さじ１\n 豚の挽肉：150g\n エビ：150g\n 玉ねぎ：2分の1\n 椎茸：３枚\n 片栗粉：大さじ１\n 生姜：１かけ\n 酒：少々\n 塩：少々\n シューマイの皮 ", recipeRecipe: "① 玉ねぎと椎茸をみじん切りにし、片栗粉をまぶす。\n② ①に塩と生姜の汁を加え、豚の挽肉、細かく刻んだエビ、酒と塩を加えて練り、30分ほど冷蔵庫で寝かす。\n③タネに煎茶をティースプーン１杯分ほど入れてかき混ぜ、シューマイの皮で包み、蒸し器で8分ほど蒸す。\n④お好みで茶葉を上にふりかけたら出来上がり♪ ",amount: "4人前" ))
+        recipeArray.append(OchaRecipe(name: "ほうじ茶の茶粥", category: .meal, level: "★★☆", imageName: "chagayu", material: "ほうじ茶（沸かしたもの）\n冷やご飯\n塩：少々 \nお好みのお漬物：適宜", recipeRecipe: "①沸かしたほうじ茶を鍋に入れ、そこに冷やご飯を入れる。\n②塩を少々加え、おかゆのように炊く。\n③お漬物を用意して完成♪ ",amount: "2人前"))
+        recipeArray.append(OchaRecipe(name: "茶殻のだし巻き卵", category: .chagara, level: "★★☆", imageName: "dashimaki", material: "卵：", recipeRecipe: " ",amount: "１本分"))
+        recipeArray.append(OchaRecipe(name: "抹茶クッキー", category: .sweet, level: "★★☆", imageName: "cookies", material: " ", recipeRecipe: " ",amount: "4人前"))
         
         
         currentRecipeArray = recipeArray
@@ -184,15 +181,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let name: String
         let imageName: String
         let category: RecipeType
+        let level: String
         let material: String
         let recipeRecipe: String
+        let amount: String
         
-        init(name: String, category: RecipeType, imageName: String, material: String, recipeRecipe: String) {
+        init(name: String, category: RecipeType,level: String, imageName: String, material: String, recipeRecipe: String, amount: String) {
             self.name = name
             self.category = category
+            self.level = level
             self.imageName = imageName
             self.material = material
             self.recipeRecipe = recipeRecipe
+            self.amount = amount
         
     }
 }

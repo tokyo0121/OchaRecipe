@@ -15,6 +15,8 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeMaterialTextView: UITextView!
     @IBOutlet weak var recipeRecipeTextView: UITextView!
+    @IBOutlet weak var recipeAmountLabel: UILabel!
+    @IBOutlet weak var recipeLevelLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +25,7 @@ class RecipeDetailViewController: UIViewController {
         recipeNameLabel.text = recipe.name
         recipeMaterialTextView.text = recipe.material
         recipeRecipeTextView.text = recipe.recipeRecipe
+        recipeAmountLabel.text = recipe.amount
+        recipeLevelLabel.text = recipe.level
     }
 }
