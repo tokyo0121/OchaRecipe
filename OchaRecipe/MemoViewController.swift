@@ -44,6 +44,8 @@ class MemoViewController: UIViewController,UITableViewDataSource,UITableViewDele
         memoTableView.dataSource = self
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        memoTableView.reloadData()
         loadMemo()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,7 +68,7 @@ class MemoViewController: UIViewController,UITableViewDataSource,UITableViewDele
             memoTableView.reloadData()
         }
     }
-    
 
 }
+
 

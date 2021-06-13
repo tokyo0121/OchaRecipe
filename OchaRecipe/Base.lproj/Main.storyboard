@@ -93,10 +93,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="750-E8-HtZ"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2q-cr-4wj">
-                                <rect key="frame" x="238" y="667" width="107" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2q-cr-4wj">
+                                <rect key="frame" x="235" y="663" width="110" height="65"/>
                                 <color key="backgroundColor" red="0.3382001724" green="0.45403243560000001" blue="0.2385861158" alpha="0.9518971222" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="AxW-ha-czl"/>
+                                    <constraint firstAttribute="width" constant="110" id="GJJ-RP-MaY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
                                 <state key="normal" title="メモ">
                                     <color key="titleColor" red="0.8735294938" green="0.91568636889999999" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -114,10 +117,12 @@
                         <viewLayoutGuide key="safeArea" id="Y49-Mb-NeJ"/>
                         <color key="backgroundColor" red="0.87352949380874634" green="0.91568636894226074" blue="0.56862747669219971" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Y49-Mb-NeJ" firstAttribute="trailing" secondItem="U2q-cr-4wj" secondAttribute="trailing" constant="30" id="9a0-SC-gvm"/>
                             <constraint firstItem="Y49-Mb-NeJ" firstAttribute="trailing" secondItem="Tcc-rl-nCa" secondAttribute="trailing" id="c7E-Ew-UgH"/>
                             <constraint firstItem="Tcc-rl-nCa" firstAttribute="top" secondItem="Y49-Mb-NeJ" secondAttribute="top" id="dxm-G7-1Tx"/>
                             <constraint firstItem="Y49-Mb-NeJ" firstAttribute="bottom" secondItem="Tcc-rl-nCa" secondAttribute="bottom" id="i87-vn-Rto"/>
                             <constraint firstItem="Tcc-rl-nCa" firstAttribute="leading" secondItem="Y49-Mb-NeJ" secondAttribute="leading" id="in3-dY-BaR"/>
+                            <constraint firstItem="Y49-Mb-NeJ" firstAttribute="bottom" secondItem="U2q-cr-4wj" secondAttribute="bottom" constant="50" id="nJh-nb-JlP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -137,6 +142,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-KX-dli">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="EM6-hZ-ng0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0m3-qB-enA"/>
+                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-Nd-uPf">
                                 <rect key="frame" x="25" y="20" width="320" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -158,7 +169,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-MZ-ZtI">
                                 <rect key="frame" x="25" y="517" width="325" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.064918179889999997" green="0.18027671780000001" blue="0.04540444599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -166,7 +177,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SZJ-T7-T9e">
                                 <rect key="frame" x="25" y="343" width="325" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.064918179889999997" green="0.18027671780000001" blue="0.04540444599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -266,7 +277,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-d5-Zom" customClass="memoTextView" customModule="OchaRecipe">
                                 <rect key="frame" x="20" y="50" width="335" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QhY-8f-LmY"/>
                                 </constraints>
