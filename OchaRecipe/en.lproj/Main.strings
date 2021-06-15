@@ -1,0 +1,78 @@
+
+/* Class = "UILabel"; text = "Recipe"; ObjectID = "0V0-ji-ybi"; */
+"0V0-ji-ybi.text" = "Recipe";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "25g-bL-IIJ"; */
+"25g-bL-IIJ.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "3gX-n7-5jt"; */
+"3gX-n7-5jt.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5RK-to-dCU"; */
+"5RK-to-dCU.text" = "Label";
+
+/* Class = "UILabel"; text = "level"; ObjectID = "6Ig-2I-AD0"; */
+"6Ig-2I-AD0.text" = "level";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "8oc-qH-0eZ"; */
+"8oc-qH-0eZ.text" = "Category";
+
+/* Class = "UIButton"; normalTitle = "日本語"; ObjectID = "EQo-ZN-4fE"; */
+"EQo-ZN-4fE.normalTitle" = "日本語";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "Gkg-WZ-wik"; */
+"Gkg-WZ-wik.normalTitle" = "English";
+
+/* Class = "UINavigationItem"; title = "わたしのメモ帳"; ObjectID = "LPC-x8-diS"; */
+"LPC-x8-diS.title" = "わたしのメモ帳";
+
+/* Class = "UILabel"; text = "作り方"; ObjectID = "M2Z-Pb-HtR"; */
+"M2Z-Pb-HtR.text" = "作り方";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Nyq-2s-WlA"; */
+"Nyq-2s-WlA.text" = "Label";
+
+/* Class = "UIViewController"; title = "わたしのメモ帳"; ObjectID = "QFa-Ee-smu"; */
+"QFa-Ee-smu.title" = "わたしのメモ帳";
+
+/* Class = "UISearchBar"; Qx6-nG-0pL.scopeButtonTitles[0] = "全て"; ObjectID = "Qx6-nG-0pL"; */
+"Qx6-nG-0pL.scopeButtonTitles[0]" = "全て";
+
+/* Class = "UISearchBar"; Qx6-nG-0pL.scopeButtonTitles[1] = "お料理"; ObjectID = "Qx6-nG-0pL"; */
+"Qx6-nG-0pL.scopeButtonTitles[1]" = "お料理";
+
+/* Class = "UISearchBar"; Qx6-nG-0pL.scopeButtonTitles[2] = "甘味"; ObjectID = "Qx6-nG-0pL"; */
+"Qx6-nG-0pL.scopeButtonTitles[2]" = "甘味";
+
+/* Class = "UISearchBar"; Qx6-nG-0pL.scopeButtonTitles[3] = "日用品"; ObjectID = "Qx6-nG-0pL"; */
+"Qx6-nG-0pL.scopeButtonTitles[3]" = "日用品";
+
+/* Class = "UISearchBar"; Qx6-nG-0pL.scopeButtonTitles[4] = "茶殻"; ObjectID = "Qx6-nG-0pL"; */
+"Qx6-nG-0pL.scopeButtonTitles[4]" = "茶殻";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T47-pl-2j8"; */
+"T47-pl-2j8.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "メモ"; ObjectID = "U2q-cr-4wj"; */
+"U2q-cr-4wj.normalTitle" = "メモ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZvM-ew-arM"; */
+"ZvM-ew-arM.text" = "Label";
+
+/* Class = "UILabel"; text = "level"; ObjectID = "c6a-Em-3K5"; */
+"c6a-Em-3K5.text" = "level";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "fiV-QO-Tlb"; */
+"fiV-QO-Tlb.text" = "Title";
+
+/* Class = "UILabel"; text = "材料"; ObjectID = "i1N-nf-EdO"; */
+"i1N-nf-EdO.text" = "材料";
+
+/* Class = "UIViewController"; title = "メモ一覧"; ObjectID = "jYv-pA-DJl"; */
+"jYv-pA-DJl.title" = "メモ一覧";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "kNG-P2-0WK"; */
+"kNG-P2-0WK.text" = "Title";
+
+/* Class = "UILabel"; text = "Material"; ObjectID = "sgA-kV-gb1"; */
+"sgA-kV-gb1.text" = "Material";

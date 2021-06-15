@@ -7,11 +7,20 @@
 
 import UIKit
 
+protocol ArticleCellDelegate {
+    func reloadCell(index: IndexPath)
+}
+
+
 class TableCell: UITableViewCell {
     
     @IBOutlet var imgView: UIImageView!
     @IBOutlet var nameLbl: UILabel!
     @IBOutlet var categoryLbl: UILabel!
+    
+    var delegte: ArticleCellDelegate?
+    var index:IndexPath!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +29,5 @@ class TableCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-     
-
-}
+    }
 }

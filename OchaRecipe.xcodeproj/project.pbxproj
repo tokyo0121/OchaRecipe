@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D90CA482678F24900DB6A7B /* EnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90CA472678F24900DB6A7B /* EnViewController.swift */; };
+		2D90CA4A2678F5A800DB6A7B /* EnRecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90CA492678F5A800DB6A7B /* EnRecipeDetailViewController.swift */; };
+		2D90CA4C2678F8DE00DB6A7B /* EnTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90CA4B2678F8DE00DB6A7B /* EnTableCell.swift */; };
 		2D95D6A526594A1900421708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D6A426594A1900421708 /* AppDelegate.swift */; };
 		2D95D6A726594A1900421708 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D6A626594A1900421708 /* SceneDelegate.swift */; };
 		2D95D6A926594A1900421708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D6A826594A1900421708 /* ViewController.swift */; };
@@ -41,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D90CA362678D17200DB6A7B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2D90CA472678F24900DB6A7B /* EnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnViewController.swift; sourceTree = "<group>"; };
+		2D90CA492678F5A800DB6A7B /* EnRecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnRecipeDetailViewController.swift; sourceTree = "<group>"; };
+		2D90CA4B2678F8DE00DB6A7B /* EnTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnTableCell.swift; sourceTree = "<group>"; };
 		2D95D6A126594A1900421708 /* OchaRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OchaRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D95D6A426594A1900421708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D95D6A626594A1900421708 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +131,9 @@
 				2DE784B82666947700965D59 /* MemoViewController.swift */,
 				2DE784BC2667351700965D59 /* DetailViewController.swift */,
 				2DE784BE26674C3800965D59 /* RecipeDetailViewController.swift */,
+				2D90CA472678F24900DB6A7B /* EnViewController.swift */,
+				2D90CA492678F5A800DB6A7B /* EnRecipeDetailViewController.swift */,
+				2D90CA4B2678F8DE00DB6A7B /* EnTableCell.swift */,
 			);
 			path = OchaRecipe;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 2D95D69826594A1900421708;
 			productRefGroup = 2D95D6A226594A1900421708 /* Products */;
@@ -277,11 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D90CA4A2678F5A800DB6A7B /* EnRecipeDetailViewController.swift in Sources */,
 				2DE784B92666947700965D59 /* MemoViewController.swift in Sources */,
+				2D90CA4C2678F8DE00DB6A7B /* EnTableCell.swift in Sources */,
 				2DE784BF26674C3800965D59 /* RecipeDetailViewController.swift in Sources */,
 				2D95D6A926594A1900421708 /* ViewController.swift in Sources */,
 				2D95D6A526594A1900421708 /* AppDelegate.swift in Sources */,
 				2DE784B72666912500965D59 /* AddMemoViewController.swift in Sources */,
+				2D90CA482678F24900DB6A7B /* EnViewController.swift in Sources */,
 				2DE784B1265FF21000965D59 /* TableCell.swift in Sources */,
 				2D95D6A726594A1900421708 /* SceneDelegate.swift in Sources */,
 				2DE784BD2667351700965D59 /* DetailViewController.swift in Sources */,
@@ -332,6 +346,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2D95D6B026594A1D00421708 /* Base */,
+				2D90CA362678D17200DB6A7B /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -343,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -404,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -469,6 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.com.lifeistech.ocharecipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "L12-Igeta-Develop";
@@ -491,6 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.com.lifeistech.ocharecipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "L13-Igeta-Distribution";
